@@ -8,6 +8,7 @@ import React from "react";
 import { CocktailProvider } from "./context/CocktailProvider";
 import Form from "./components/Form";
 import { CategoriesProvider } from "./context/CategoriesProvider";
+import ResultList from "./components/ResultList";
 function App() {
   return (
     <CocktailProvider>
@@ -17,6 +18,7 @@ function App() {
       <CategoriesProvider>
         <Form />
       </CategoriesProvider>
+      <ResultList />
     </CocktailProvider>
   );
 }

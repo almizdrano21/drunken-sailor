@@ -8,15 +8,13 @@ const Form = () => {
   const { categories } = useCategories();
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!Object.values(cocktailInfo).includes("")) {
-      getCocktails();
-    }
+    !Object.values(cocktailInfo).includes("") && getCocktails();
   };
   return (
     <div>
       <form>
         <div>
-          <label htmlFor="name">Drink name</label>
+          <label htmlFor="name">Alcohol </label>
           <input
             type="text"
             name="name"
@@ -25,7 +23,7 @@ const Form = () => {
           />
         </div>
         <div>
-          <label htmlFor="name">Alcohol type</label>
+          <label htmlFor="name">Drink type </label>
           <select
             name="category"
             id="category"
