@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+/**
+ * 1. Crear el formulario con el botón de enviar
+ * 2. Crear el context para manejar los select y la busqueda de bebidas en la api
+ * 3. Crear el componente que muestre un listdao con las imagenes de los cocteles el nombre y el ver más
+ * 4. Crear el modal que aparece cuando hacemos click en el botón de ver más.
+ */
+import React from "react";
+import { CocktailProvider } from "./context/CocktailProvider";
+import Form from "./components/Form";
+import { CategoriesProvider } from "./context/CategoriesProvider";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <CocktailProvider>
+      <header>
+        <h1>Drunken sailor</h1>
+      </header>
+      <CategoriesProvider>
+        <Form />
+      </CategoriesProvider>
+    </CocktailProvider>
+  );
 }
 
-export default App
+export default App;
