@@ -9,6 +9,8 @@ import { CocktailProvider } from "./context/CocktailProvider";
 import Form from "./components/Form";
 import { CategoriesProvider } from "./context/CategoriesProvider";
 import ResultList from "./components/ResultList";
+import { useState } from "react";
+import CocktailInfo from "./components/CocktailInfo";
 function App() {
   return (
     <CocktailProvider>
@@ -18,6 +20,7 @@ function App() {
       <CategoriesProvider>
         <Form />
       </CategoriesProvider>
+      <CocktailInfo />
       <ResultList />
     </CocktailProvider>
   );
