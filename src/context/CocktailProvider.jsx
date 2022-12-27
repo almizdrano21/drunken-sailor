@@ -31,6 +31,7 @@ const CocktailProvider = ({ children }) => {
       setCocktailData({});
     }
   }, [selectedCocktailID]);
+
   return (
     <CocktailContext.Provider
       value={{

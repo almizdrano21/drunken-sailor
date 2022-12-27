@@ -6,11 +6,21 @@
  */
 import React from "react";
 import { CocktailProvider } from "./context/CocktailProvider";
-import Form from "./components/Form";
+import CocktailForm from "./components/CocktailForm";
 import { CategoriesProvider } from "./context/CategoriesProvider";
 import ResultList from "./components/ResultList";
-import { useState } from "react";
 import CocktailInfo from "./components/CocktailInfo";
+import "./index.css";
+/**
+ * TODO css de la aplicación
+ * TODO comparar con el curso
+ */
+/**
+ *
+ */
+/**
+ * es imposible saberlo coçon
+ */
 function App() {
   return (
     <CocktailProvider>
@@ -18,7 +28,7 @@ function App() {
         <h1>Drunken sailor</h1>
       </header>
       <CategoriesProvider>
-        <Form />
+        <CocktailForm />
       </CategoriesProvider>
       <CocktailInfo />
       <ResultList />
